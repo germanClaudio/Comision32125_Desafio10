@@ -4,7 +4,6 @@ const { authMiddleware } = require('../../middleware/auth.middleware')
 
 const routerSession = Router()
 
-// aca nuestras rutas
 routerSession.get('/', authMiddleware, sessionGet)
 routerSession.get('/logout', sessionLogout)
 routerSession.post('/login', sessionPostLogin )
