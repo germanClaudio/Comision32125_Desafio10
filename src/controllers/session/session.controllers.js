@@ -12,7 +12,7 @@ const sessionGet = async (req, res) => {
 }
 
 const sessionLogout = (req, res) => {
-    console.log('req.session: ', req.session.user)
+    //console.log('req.session: ', req.session.user)
         req.session.destroy(err =>{
             if(err) return res.send(err)
              res.render('login.ejs')
