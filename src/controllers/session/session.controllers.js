@@ -2,7 +2,7 @@ const sessionGet = async (req, res) => {
     try {
         req.session.visitas = req.session.visitas ? req.session.visitas + 1 : 1
         console.log('user: ', req.session.user)
-        res.render('index.ejs', { username: req.session.user, visitas: req.session.visitas })
+        res.render('index.ejs' , { username: req.session.user, visitas: req.session.visitas }) //login.ejs
      } catch (error) {
         return res.status(500).json({
             msg: error.message,
